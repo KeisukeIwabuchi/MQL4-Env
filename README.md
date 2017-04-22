@@ -28,10 +28,10 @@ IS_DEBUG=true
 ```
 string api_token = Env::get<string>("API_TOKEN");
 ```
-Env::get<取得する値の型>)(key, keyが存在しない場合の初期値)の形式で実行する。
-初期値は省略可能。
-初期値を省略し、尚且つkeyが存在しない場合はNULLまたはNULLに相当する値が返る。
-bool型の値を取得する場合は、getBoolValueメソッドを実行する。
+Env::get<取得する値の型>)(key, keyが存在しない場合の初期値)の形式で実行する。  
+初期値は省略可能。  
+初期値を省略し、尚且つkeyが存在しない場合はNULLまたはNULLに相当する値が返る。  
+bool型の値を取得する場合は、getBoolValueメソッドを実行する。  
 
 
 ## Sample
