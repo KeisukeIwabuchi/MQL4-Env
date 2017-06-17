@@ -1,5 +1,9 @@
-# MQL4-configuration-file
+# MQL4-Env
 MQL4で口座ごとの環境設定ファイルを扱う。
+
+
+## Requirement
+- [MQL4-SymbolSearch](https://github.com/KeisukeIwabuchi/MQL4-SymbolSearch)
 
 
 ## Install
