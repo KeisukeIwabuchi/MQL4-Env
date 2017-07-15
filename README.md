@@ -1,5 +1,5 @@
 # MQL4-Env
-MQL4で口座ごとの環境設定ファイルを扱う。
+MQL4 handles environment setting files for each account.
 
 
 ## Requirement
@@ -7,14 +7,14 @@ MQL4で口座ごとの環境設定ファイルを扱う。
 
 
 ## Install
-1. Env.mqhとdefines.mqhをダウンロード
-2. データフォルダを開き、/MQL4/Includes/mql4_modules/Env/配下に2つのファイルを保存
+1. Donwload Env.mqh and defines.mqh
+2. Save the file to /MQL4/Includes/mql4_modules/Env/
 
 
 ## Usage
-### 環境設定ファイルの準備
-1. <データフォルダ>/MQL4/Filesの中にテキストファイルを作成する（.txtや.iniなど）
-2. 作成したテキストファイルにkey=valueの形式で設定を記述する
+### Prepare the environment file
+1. Make a file (.txt or .ini) in /MQL4/Files/ 
+2. Write the setting in the form of key = value in the created text file.
 
 ```
 API_TOKEN=123456890-hogehogehoge
@@ -22,22 +22,20 @@ ACCOUNT=123
 IS_DEBUG=true
 ```
 
-### プログラム内での使い方
-1. Env.mqhを読み込む
-2. 環境設定ファイルを読み込む
-3. 環境設定ファイルから値を取得する
+### How to use
+1. Includes Env.mqh
+2. Read the configuration file.
+3. Acquire value from environment setting file.
 
-値を取得するにはgetメソッドを実行する。
-
+To get the value, execute the get method.
 ```
 string api_token = Env::get<string>("API_TOKEN");
 ```
 
-Env::get<取得する値の型>)(key, keyが存在しない場合の初期値)の形式で実行する。  
-初期値は省略可能。  
-初期値を省略し、尚且つkeyが存在しない場合はNULLまたはNULLに相当する値が返る。  
-bool型の値を取得する場合は、getBoolValueメソッドを実行する。  
-
+Env::get <type of value to retrieve> (initial value if key, key does not exist).  
+Initial value can be omitted.  
+If the initial value is omitted and a key does not exist, a value equivalent to NULL or NULL is returned.  
+To get the bool type value, execute the getBoolValue method.
 ``` cpp
 #property strict
 
