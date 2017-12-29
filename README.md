@@ -8,7 +8,7 @@ MQL4 handles environment setting files for each account.
 
 ## Install
 1. Donwload Env.mqh and defines.mqh
-2. Save the file to /MQL4/Includes/mql4_modules/Env/
+2. Save the file to /MQL4/Include/mql4_modules/Env/
 
 
 ## Usage
